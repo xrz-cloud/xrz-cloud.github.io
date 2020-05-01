@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>xrz-cloud Web Manager Login Page</title>
+		<style>
+		    #bg{
+			width:30%;
+			height:25%;
+			top:30%;
+			left:60%;
+			position:fixed;
+			background-size:60%;
+		     } 
+		</style>
+		<script type="text/javascript" >
+		     function check() {
+			 var a=document.getElementById('username').value;
+			 var b=document.getElementById('password').value;
+			 var c=document.getElementById('Username').value;
+			 var d=document.getElementById('Password').value;
+			 if(a!=c)
+			      alert("没有找到此账户!");
+			 else if(b!=d)
+			      alert("密码输错了呢!");
+		     else
+			 window.location="https://cloud2.xrzyun.top/CWM.html";
+		     }
+		</script>
+	</head>
+	<body>
+	      <div id="bg">
+		   <form>
+		      <table width="100%">
+			 <tr>
+				<td style="text-align:right" height:"100px">
+				<p>name:</p></td>
+				<td><input type="text" id="username">
+				<input type="hidden" id="Username" value="admin"></td>
+			</tr>
+			<tr>
+				<td style="text-align:right">
+				<p>password:</p></td>
+				<td><input type="password" id="password">
+				<input type="hidden" id="Password" value="xrz1234567890"></td>
+			</tr>
+			<tr>
+				 <td>&nbsp;</td>
+				  <td><input type="button" value="登录" onclick='check()'></td>
+			</tr>
+			</table>
+		    </form>
+		</div>
+	</body>
+</html>
