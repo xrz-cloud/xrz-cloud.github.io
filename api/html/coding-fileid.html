@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<style>
+    html, body {
+        width: 100%;
+        margin: 0;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        min-height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    p {
+        word-break: break-all;
+    }
+
+    a {
+    color: #4183c4;
+    text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+        h1 {
+            margin-top: 80px;
+        }
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block {
+        display: block;
+        position: relative;
+    }
+
+    .url {
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        position: relative;
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #bfbfbf;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .bar {
+        content: '';
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+        background: #00bfb3;
+        transition: 0.2s ease transform;
+        -moz-transition: 0.2s ease transform;
+        -webkit-transition: 0.2s ease transform;
+        transform: scaleX(0);
+    }
+
+    .url:focus ~ .bar {
+        transform: scaleX(1);
+    }
+
+    .btn {
+        line-height: 38px;
+        background-color: #00bfb3;
+        color: #fff;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 14px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        padding: 5px;
+        width: 160px;
+        margin: 30px 0;
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="https://static.hdslb.com/images/favicon.ico">
+    <script>
+        function CopyUrl() {
+            let url = document.querySelector('#copyObj');
+            url.select(); // 选择对象
+            document.execCommand("Copy");
+        }
+        function toSubmit(e) {
+            e.preventDefault()
+            document.getElementById("copyObj").value=('https://coolaf.com/tool/gp?u=https://e.coding.net/open-api&p={"Action":"DescribeIssueFileUrl","ProjectName":"xrz-video","FileId":' + document.getElementsByName('q')[0].value + ',"Authorization":"3d81637cf09027ffa006d707419a899e2f3f4cca"}&h=Content-Type:application/json');
+            document.getElementById("jumpurl").href=('https://coolaf.com/tool/gp?u=https://e.coding.net/open-api&p={"Action":"DescribeIssueFileUrl","ProjectName":"xrz-video","FileId":' + document.getElementsByName('q')[0].value + ',"Authorization":"3d81637cf09027ffa006d707419a899e2f3f4cca"}&h=Content-Type:application/json');
+            return false
+        }
+    </script>
+    <title>FileID转下载链接</title>
+</head>
+<body class="flex">
+<h1 style="margin-bottom: 50px">FileID转下载链接工具</h1>
+<form action="./" method="get" style="padding-bottom: 40px" target="_blank" class="flex" onsubmit="toSubmit(event)">
+    <label class="block" style="width: fit-content">
+        <input class="block url" name="q" type="number" placeholder="请输入FileID(资源码)" required>
+        <div class="bar"></div>
+    </label>
+    <input class="block btn" type="submit" value="生成">
+    <label class="block" style="width: fit-content">
+        <p>下载链接：<input type="url" class="block url" placeholder="将显示下载链接" id="copyObj" disabled>
+        <div class="bar"></div>
+    </label>
+    <p><a href="#" target="_blank" id="jumpurl">点击跳转</a></p>
+    <input class="block btn" onclick="CopyUrl()" type="submit" value="复制"></p>
+    </div>
+    输入FileID(资源码),点击生成,打开获得链接,再点击新页面中的提交,即可在下方"格式化Response"中的Url后找到链接。
+    本服务由<a href='https://www.xrzyun.top'>xrz</a>提供。
+</form>
+</p>
+<!-- require APlayer -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<meting-js
+        id="863497303"//网易的上https://music.163.com/登陆自己的号找一个喜欢的歌单，复制地址栏上面的ID就可以啦！！！
+        lrc-type="0"
+        server="netease"//qq音乐或者其他上面有账号的小伙伴可以参考https://github.com/metowolf/MetingJS哦！！！
+        order="list"//这里是歌单加载的排列顺序，list:按照原歌单排列；random：打乱顺序排列
+        type="playlist"
+        fixed="true"
+        list-olded="true">
+</meting-js>
+</body>
+</html>
