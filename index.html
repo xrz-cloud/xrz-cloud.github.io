@@ -18,6 +18,17 @@
       integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
       crossorigin="anonymous"
     />
+	<style>
+	#hitokoto_text {
+    /* color: #4183c4; */
+	color: #000000;
+    text-decoration: none;
+    }
+    a {
+    color: #4183c4;
+    text-decoration: none;
+    }
+	</style>
 	<script data-ad-client="ca-pub-1584378036823590" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
@@ -40,7 +51,7 @@
 
     <div class="mc-drawer mdui-drawer" id="main-drawer">
       <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 50%;">
-        <a class="mdui-list-item mdui-ripple mdui-list-item-active" href="/">
+        <a class="mdui-list-item mdui-ripple mdui-list-item-active" href="/" onclick="actdrawer(0,0)">
           <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
           <div class="mdui-list-item-content">首页</div>
         </a>
@@ -84,8 +95,10 @@
     <script src="https://cdn.coding.xrzyun.top/js/music.js"></script>
       </div>
       <div class="copyright">
+		<p>联系方式：<a mdui-dialog="{target: '#email-dialog'}">邮箱</a>&nbsp;&nbsp;&nbsp;<a mdui-dialog="{target: '#qq-dialog'}">QQ</a></p>
+		<div class="mdui-divider"></div>
         <p>Powered by <a href="https://xrzyun.top" target="_blank">XRZYUN</a>
-        <br/>
+        <br>
         <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20215000" target="_blank"> 20215000号</a>
         </p>
       </div>
@@ -98,7 +111,8 @@
       <div class="swiper-slide">
           <div style="margin-bottom: -100px;">
               <h1 style="font-family:'Malapropism';">XRZYUN</h1>
-              <p class="lead css1e6398ff7d186ee" id="hitoko123">大师之路虽荆棘遍布,所幸抬头仰望,总有星辰相伴!</p>
+              <!--<p class="lead css1e6398ff7d186ee"></p>-->
+			  <p id="hitokoto"><a href="#" id="hitokoto_text">大师之路虽荆棘遍布,所幸抬头仰望,总有星辰相伴!</a></p>
               <div id="page-index" class="mdui-container"><div class="banner" style="padding-top: 0px;"><div class="actions"><a href="/index-old.html" class="mdui-btn mdui-ripple" style="font-family:'COCOGOOSE';" target="_blank">返回旧首页</a></div></div></div>
          </div>
       </div>
@@ -120,20 +134,26 @@
 
 <div class="comment-section">
   <div class="mdui-container">
-    <div class="case-header css1e63a04b1b186ee">我的网站</div>
+    <div class="case-header css1e63a04b1b186ee">展示栏</div>
 
-    <div class="mdui-row-md-3 mdui-row-sm-3">
+    <div class="mdui-row-xs-3">
     <a href="https://images.weserv.nl/?url=https://i0.hdslb.com/bfs/article/21b783e383d16b2b66468cf6655b9d517e777112.jpg" target="_blank" rel="nofollow" class="mdui-col case-item mdui-ripple" style="text-decoration: none;">
     <img class="case-item-logo" src="https://images.weserv.nl/?url=https://i0.hdslb.com/bfs/article/da952fd8598cfb9f8b9b6718f8a0823d4967f367.jpg@72w_72h_1e_1c.jpg"><div class="case-item-detail">
     <div class="case-item-detail-title">我的小程序</div>
     <div class="case-item-detail-desc">几个方便使用我项目的小功能箱。</div></div></a>
-    </div>
 
-    <div class="mdui-row-md-3 mdui-row-sm-3">
+	<a href="/blog/xtc-root" target="_blank" rel="nofollow" class="mdui-col case-item mdui-ripple" style="text-decoration: none;">
+    <div class="case-item-detail">
+    <div class="case-item-detail-title">XTC-ROOT</div>
+    <div class="case-item-detail-desc">XTC任意版本root方法</div></div></a>
+	
+	<a rel="nofollow" class="mdui-col case-item mdui-ripple" style="text-decoration: none;">
     <div class="case-item-detail">
     <div class="case-item-detail-title">More...</div>
-    <div class="case-item-detail-desc">点击右上角获取更多。</div></div>
+    <div class="case-item-detail-desc">点击右上角获取更多。</div></div></a>
     </div>
+
+    
 
   </div>
 </div>
@@ -147,10 +167,25 @@
   </div>
 </div>-->
 
+    <div class="mdui-dialog" id="email-dialog">
+      <div class="mdui-dialog-content"><a href="mailto:support@xrzyun.top">support@xrzyun.top</a></div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+    </div>
+	<div class="mdui-dialog" id="qq-dialog">
+      <div class="mdui-dialog-content"><p>3545270592</p></div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+    </div>
+	
     <script
       src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
       integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
       crossorigin="anonymous"
     ></script>
-	<script scr="https://cdn.coding.xrzyun.top/js/iframe.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdn.coding.xrzyun.top/js/iah.js" id="query_ok" query_conf="0xx0"></script>
 </div>
