@@ -9,8 +9,12 @@
   <meta name="theme-color" content="#ffffff">
   <title>XRZYUN</title>
   <meta name="description" content="XRZYUN">
+    
     <link rel="stylesheet" href="//cdn.coding.xrzyun.top/css/lychape.cn/md2.css">
     <link rel="stylesheet" href="//cdn.coding.xrzyun.top/css/lychape.cn/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
+	<script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+	
     <link rel="stylesheet" href="//cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css">
     <link
       rel="stylesheet"
@@ -18,6 +22,18 @@
       integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
       crossorigin="anonymous"
     />
+	<script>setTimeout(function(){NProgress.start();NProgress.inc();},"500");</script>
+	<style>
+	#hitokoto_text {
+    /* color: #4183c4; */
+	color: #000000;
+    text-decoration: none;
+    }
+    a {
+    color: #4183c4;
+    text-decoration: none;
+    }
+	</style>
 	<script data-ad-client="ca-pub-1584378036823590" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
@@ -84,8 +100,10 @@
     <script src="https://cdn.coding.xrzyun.top/js/music.js"></script>
       </div>
       <div class="copyright">
+		<p>联系方式：<a href="https://support.qq.com/product/318259" target="_blabk">兔小巢</a>&nbsp;&nbsp;&nbsp;<a mdui-dialog="{target: '#email-dialog'}">邮箱</a>&nbsp;&nbsp;&nbsp;<a mdui-dialog="{target: '#qq-dialog'}">QQ</a></p>
+		<div class="mdui-divider"></div>
         <p>Powered by <a href="https://xrzyun.top" target="_blank">XRZYUN</a>
-        <br/>
+        <br>
         <a href="https://icp.gov.moe" target="_blank">萌ICP备 </a><a href="https://icp.gov.moe/?keyword=20215000" target="_blank"> 20215000号</a>
         </p>
       </div>
@@ -95,13 +113,29 @@
 <link href='https://cdn.repository.webfont.com/webfonts/nomal/100078/47031/5fe71d3af629d8ee3c9ba78d.css' rel='stylesheet' type='text/css' />
 
 <div class="mdui-typo">
-<script
-  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
-  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
-  crossorigin="anonymous"
-></script>
-<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="https://cdn.coding.xrzyun.top/js/iah.js" id="query_ok" query_conf="000x"></script>
+<div class="mdui-dialog" id="email-dialog">
+      <div class="mdui-dialog-content"><a href="mailto:support@xrzyun.top">support@xrzyun.top</a></div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+    </div>
+	<div class="mdui-dialog" id="qq-dialog">
+      <div class="mdui-dialog-content"><p>3545270592</p></div>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+    </div>
+	
+	<script
+      src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+      integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+      crossorigin="anonymous"
+    ></script>
+	<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script src="//cdn.coding.xrzyun.top/js/xrzyun.js" id="query_ok" query_conf="000xx"></script>
+	<script>window.onload = function() {NProgress.done(true);}</script>
 </div>
 </div>
+</body>
+</html>
